@@ -1,6 +1,7 @@
 package makedirectory;
 
 import java.io.File;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,6 +30,31 @@ public class Main {
                 System.out.println("Nem készült el a 'masodik' nevű könyvtár!");
             }
         }
+        try {
 
+            File file = new File("c:\\Directory1\\virag.txt");
+
+            if (file.createNewFile()){
+                System.out.println("File is created!");
+            }else{
+                System.out.println("File already exists.");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+
+            File file = new File("c:\\Directory1\\jatek.txt");
+
+            if (file.createNewFile()){
+                System.out.println("File is created!");
+            }else{
+                System.out.println("File already exists.");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
