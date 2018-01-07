@@ -56,5 +56,18 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        try {
+
+            File file = new File("c:\\Directory1\\elso\\ajandek.txt");
+
+            if (file.createNewFile()){
+                System.out.println("File is created!");
+            }else{
+                System.out.println("File already exists.");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
